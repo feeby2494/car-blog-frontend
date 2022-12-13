@@ -16,7 +16,7 @@
           >
           </div>
           <figure
-            class="image is-2by1"
+            class="image "
             v-if="element.image"
           >
             <img
@@ -45,6 +45,26 @@
     width: auto;
     height: auto;
     max-width: 100%;
+    max-height: auto;
+  }
+
+  .image iframe {
+    width: auto;
+    height: auto;
+    max-width: 100%;
     max-height: 100%;
+  }
+
+  .iframe-container {
+    position: relative;
+    padding-bottom: 56.5%;
+    height: 0;    
+  }
+  .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
   }
 </style>

@@ -7,11 +7,16 @@
             v-bind:key="post.id"
         >
             <h3 class="is-size-4">{{ post.title }}</h3>
-            <img 
-                class="image"
-                v-if="post.elements.filter(x => x.thumbnail !== null)"
-                v-bind:src="post.elements.filter(x => x.thumbnail !== null)[0].get_thumbnail"
-            />
+            <figure
+                v-if="post.elements.lenght > 0"
+            >
+                <img 
+                    class="image"
+                    v-if="post.elements.filter(x => x.thumbnail !== null)"
+                    v-bind:src="post.elements.filter(x => x.thumbnail !== null)[0].get_thumbnail"
+                />
+            </figure>
+            
             <p class="is-size-6 mt-2 has-text-grey">{{ post.short_desc }}</p>
             <router-link v-bind:to="post.get_absolute_url" class="button is-dark mt-4">View Details</router-link>
 
