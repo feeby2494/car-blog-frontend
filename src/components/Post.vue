@@ -16,7 +16,7 @@
           >
           </div>
           <figure
-            class="image "
+            class="image"
             v-if="element.image"
           >
             <img
